@@ -49,7 +49,7 @@ label.wb::selection {
 	transform: translateX(25px);
 }
 
-.wb-check, .wb-radio {
+.wb-check span.wb, .wb-radio span.wb {
 	width: 20px;
 	height: 20px;
 }
