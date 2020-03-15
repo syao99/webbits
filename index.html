@@ -18,17 +18,20 @@
 </head>
 <body>
 <aside>
-	<svg class="icon" id="menu-icon" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2	s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2	S29.104,22,28,22z"/></svg>
-	<svg class="icon menu-hide" id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M4.34 2.93l12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34L4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>
-		<nav id="navbar" class="menu-hide">
+	<!--<svg class="icon" id="menu-icon" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2	s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2	S29.104,22,28,22z"/></svg>
+	<svg class="icon menu-hide" id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M4.34 2.93l12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34L4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>-->
+		<nav id="navbar" class="wb wb-nav">
+			<label class="wb"><input type="checkbox" /><span class="wb-burger-icon"></span>
 			<header><h2>Contents</h2></header>
 			<ul>
 				<li><a href="#introduction" class="nav-link">Introduction</a></li>
 				<li><a href="#boilerplate" class="nav-link">HTML Boilerplate</a></li>
 				<li><a href="#usage" class="nav-link">Usage</a></li>
 				<li><a href="#inputs" class="nav-link">Inputs</a></li>
+				<li><a href="#hamburger" class="nav-link">Hamburger Menu</a></li>
 				<li><a href="#html_display" class="nav-link">HTML Display</a></li>
 			</ul>
+			</label>
 		</nav>
 	</aside>
 	
@@ -71,7 +74,7 @@
 		
 		<section id="usage">
 			<h2>Usage</h2>
-			<p>Just add the relevant files.</p>
+			<p>Add the relevant files.</p>
 			<code>
 				&lt;link href="webbits.css" rel="stylesheet"&gt;<br />
 				&lt;script src="webbits.js"&gt;&lt;/script&gt;
@@ -85,7 +88,8 @@
 
 		<section id="inputs">
 			<h2>Inputs</h2>
-			<p>Toggle Switch. No JS, but requires some extra HTML fluff.</p>
+			<h3>Toggle Switch.</h3>
+			<p>No JS, but requires some extra HTML fluff.</p>
 			<label class="wb wb-switch">
 				<span>Switch 1</span>
 				<input type="checkbox" /><span class="wb"></span>
@@ -96,7 +100,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
 				&lt;/label&gt;
 			</code>
-			<p>Custom style Radios and Checkboxes</p>
+			<h3>Custom Radios and Checkboxes</h3>
 			<label class="wb wb-check">
 				<span>Checkbox 1</span>
 				<input type="checkbox" /><span class="wb"></span>
@@ -114,13 +118,59 @@
 				<input type="radio" name="radio-group" /><span class="wb"></span>
 			</label>
 			<code>
+				&lt;label class="wb wb-check"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Checkbox 1&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&lt;/label&gt;<br />
+				&lt;label class="wb wb-check"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Checkbox 2&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&lt;/label&gt;<br />
+				&lt;label class="wb wb-radio"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Radio 1&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&lt;/label&gt;<br />
+				&lt;label class="wb wb-radio"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Radio 2&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&lt;/label&gt;
+			</code>
+		</section>
 
+		<section id="hamburger">
+			<h2>Hamburger Menu</h2>
+			<p>Pure CSS.</p>
+			<nav class="wb wb-nav">
+				<label class="wb">
+					<input type="checkbox" />
+					<span class="wb-burger-icon"></span>
+					<ul>
+						<li><a href="#">Nav 1</a></li>
+						<li><a href="#">Nav 2</a></li>
+						<li><a href="#">Nav 3</a></li>
+					</ul>
+				</label>
+			</nav>
+			<code>
+				&lt;nav class="wb wb-nav"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="wb"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="wb-burger-icon"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Nav 1&lt;/a&gt;&lt;/li&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Nav 2&lt;/a&gt;&lt;/li&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Nav 3&lt;/a&gt;&lt;/li&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br />
+				&lt;/nav&gt;
 			</code>
 		</section>
 
 		<section id="html_display">
 			<h2>HTML Formatter</h2>
-			<p>Convert raw HTML into something somewhat displayable for this page. Mind the whitespacing/tabbing.</p>
+			<p>Convert raw HTML into something somewhat displayable. Mind the whitespacing/tabbing.</p>
+			<p>Manually add non-breaking spaces for tabs where needed:</p>
+			<p>&amp;nbsp&semi;&amp;nbsp&semi;&amp;nbsp&semi;&amp;nbsp&semi;</p>
 			<textarea placeholder="Paste XML/HTML"></textarea>
 			<button type="submit">Submit</button>
 			<p>Result</p>

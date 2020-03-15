@@ -35,4 +35,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		elem.addEventListener('click', hideMenu);
 	});
 });
-

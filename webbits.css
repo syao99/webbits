@@ -1,30 +1,33 @@
+:root {
+	--wb-color-lite: #ccc;
+	--wb-color-dark: #333;
+	--wb-color-bg: #fff;
+	--wb-color-elem: #000;
+	--wb-small-width: 400px;
+	--wb-anim-time: 0.1s;
+}
 label.wb {
 	display: inline-block;
 	user-select: none;
 }
-
 label.wb > * {
 	vertical-align: middle;
 }
-
 label.wb::selection {
 	background: transparent;
 }
-
 .wb input {
 	display: none;
 }
-
 .wb-switch span.wb {
 	cursor: pointer;
 	display: inline-block;
 	width: 50px;
 	height: 25px;
-	background-color: #ccc;
-	transition: .1s;
+	background-color: var(--wb-color-lite);
+	transition: var(--wb-anim-time);
 	border-radius: 999px;
 }
-
 .wb-switch .wb:after {
 	display: inline-block;
 	content: "";
@@ -32,19 +35,16 @@ label.wb::selection {
 	width: 19px;
 	margin-left: 3px;
 	margin-top: 3px;
-	background-color: white;
-	transition: .1s;
+	background-color: var(--wb-color-bg);
+	transition: var(--wb-anim-time);
 	border-radius: 100%;
 }
-
 .wb-switch input:checked + span.wb {
-	background-color: #333;
+	background-color: var(--wb-color-dark);
 }
-
 .wb-switch input:focus + span.wb {
-	box-shadow: 0 0 1px #333;
+	box-shadow: 0 0 1px var(--wb-color-dark);
 }
-
 .wb-switch input:checked + span.wb:after {
 	transform: translateX(25px);
 }
@@ -53,21 +53,82 @@ label.wb::selection {
 	width: 20px;
 	height: 20px;
 }
-
 .wb-check .wb, .wb-radio .wb {
 	cursor: pointer;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background: #ccc;
-	border: 3px solid #ccc;
+	background: var(--wb-color-lite);
+	border: 3px solid var(--wb-color-lite);
 	box-sizing: border-box;
+	transition: var(--wb-anim-time);
 }
-
 .wb-check input:checked + .wb, .wb-radio input:checked + .wb {
-	background: #333;
+	background: var(--wb-color-dark);
 }
-
 .wb-radio, .wb-radio .wb {
 	border-radius: 42069px;
+}
+
+.wb.wb-nav {
+	position: relative;
+}
+.wb.wb-nav label.wb {
+	cursor: pointer;
+	display: inline-block;
+	background: var(--wb-color-lite);
+	min-width: 40px;
+	min-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+}
+.wb.wb-nav .wb-burger-icon, .wb.wb-nav .wb-burger-icon:before, .wb.wb-nav .wb-burger-icon:after {
+	width: 30px;
+	height: 5px;
+	background: var(--wb-color-dark);
+	border-radius: 42069px;
+	display: inline-block;
+}
+.wb.wb-nav .wb-burger-icon:before, .wb.wb-nav .wb-burger-icon:after {
+	content: "";
+	display: inline-block;
+}
+.wb.wb-nav .wb-burger-icon:after {
+	margin-bottom: 9px;
+}
+.wb.wb-nav .wb-burger-icon {
+	margin-top: 2px;
+	transition: 0.1s;
+}
+.wb.wb-nav input:checked ~ .wb-burger-icon {
+	transform: rotate(45deg);
+	margin-top: 18px;
+}
+.wb.wb-nav input:checked ~ .wb-burger-icon:before {
+	opacity: 0;
+}
+.wb.wb-nav input:checked ~ .wb-burger-icon:after {
+	transform: rotate(-90deg) translate(18px,0);
+}
+.wb.wb-nav ul {
+	background: var(--wb-color-bg);
+	position: absolute;
+	margin-top: 15px;
+	display: none;
+	width: 100%;
+}
+.wb.wb-nav ul li a:hover {
+	background: var(--wb-color-lite);
+}
+.wb.wb-nav input:checked ~ ul {
+	display: block;
+}
+
+@media only screen and (max-width: var(--wb-small-width)) {
+	/*.wb.wb-nav .wb-burger-icon {
+		display: inline-block;
+	}
+	.wb.wb-nav ul {
+		display: block;
+	}*/
 }
