@@ -2,30 +2,30 @@ body {
 	background: #FFF;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-  }
-  
-  h1,h2,h3,h4,h5,h6,p,code {
+}
+
+h1,h2,h3,h4,h5,h6,p,code,pre,input,button,textarea,label {
 	margin: 0.75em 10px;
-  }
-  
-  img {
+}
+
+img {
 	padding: 10px;
-  }
-  
-  code {
+}
+
+code, pre {
 	background: #DDD;
 	padding: 0.5em;
 	box-sizing: border-box;
 	display: block;
 	overflow-x: scroll;
 	white-space: nowrap;
-  }
-  
-  aside, main {
+}
+
+aside, main {
 	box-sizing: border-box;
-  }
-  
-  aside {
+}
+
+aside {
 	width: 29%;
 	min-width: 180px;
 	display: inline-block;
@@ -34,88 +34,88 @@ body {
 	left: 0;
 	top: 50px;
 	padding: 0 1em 1em 0;
-	background: white;
-  }
-  
-  main {
+}
+
+main {
 	float: right;
 	width: 70%;
 	height: 100%;
 	display: inline-block;
 	padding: 0 1em 1em 0;
-  }
-  
-  header {
+}
+
+header {
 	display: flex;
 	align-items: center;
 	margin: 0;
 	background: white;
 	width: 100%;
-  }
-  
-  header > * {
+}
+
+header > * {
 	display: inline-block;
-  }
-  
-  nav {
+}
+
+nav {
 	vertical-align: middle;
-  }
-  
-  nav li a {
+}
+
+nav li a {
 	text-decoration: none;
 	padding: 0.75em;
 	background: #DDD;
+	color: black;
 	border-bottom: 1px solid #666;
 	width: 100%;
 	box-sizing: border-box;
 	display: block;
-  }
-  
-  nav li:first-child a {
+}
+
+nav li:first-child a {
 	border-top: 1px solid #666;
-  }
-  
-  nav ul {
+}
+
+nav ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
 	display: block;
-  }
-  
-  form > * {
+}
+
+form > * {
 	display: block;
 	margin: 1em 0;
 	box-sizing: border-box;
-  }
-  
-  form label span {
+}
+
+form label span {
 	width: 140px;
 	text-align: left;
 	display: inline-block;
 	background: white;
-  }
-  
-  form textarea {
+}
+
+form textarea {
 	width: 400px;
 	height: 200px;
-  }
-  
-  input, textarea, button {
+}
+
+input, textarea, button {
 	border-radius: 4px;
 	background: white;
 	border: 1px solid #999;
 	padding: 0.3em;
-  }
-  
-  #video {
+}
+
+#video {
 	width: 100%;
 	max-width: 560px;
-  }
-  
-  .icon {
+}
+
+.icon {
 	float: right;
 	padding: 10px;
 	box-sizing: border-box;
@@ -123,27 +123,36 @@ body {
 	height: 50px;
 	cursor: pointer;
 	display: none;
-  }
-  
-  .hide {
+	background: rgba(255,255,255,0.7);
+}
+
+.hide {
 	display: none !important;
 	}
-  
-  @media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
 	.icon {
-	  display: block;
+		display: block;
 	}
 	.menu-hide {
-	display: none !important;
+		display: none !important;
+	}
+	#navbar:not(.menu-hide) {
+		background: white;
 	}
 	aside {
-	  padding: 0;
-	  width: 100%;
-	  top: 0;
+		padding: 0;
+		width: 100%;
+		top: 0;
 	}
 	main {
-	  width: 100%;
-	  margin-top: 50px;
+		width: 100%;
+		margin-top: 20px;
 	}
-	/* todo: hamburger menu popout */
-  }
+}
+
+textarea {
+	display: block;
+	width: 40em;
+	height: 20ex;
+}

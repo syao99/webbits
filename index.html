@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<!--<meta http-equiv="cache-control" content="private">
+	<meta http-equiv="cache-control" content="private">
 	<meta http-equiv="cache-control" content="max-age=0" />
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-store">
-	<meta http-equiv="pragma" content="no-cache" />-->
+	<meta http-equiv="pragma" content="no-cache" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -13,7 +13,7 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
 	<link href="style.css" rel="stylesheet">
 	<link href="webbits.css" rel="stylesheet">
-	<script src="webbits.js"></script>
+	<script src="app.js"></script>
 	<title>Webbits Web Widgets</title>
 </head>
 <body>
@@ -24,8 +24,10 @@
 			<header><h2>Contents</h2></header>
 			<ul>
 				<li><a href="#introduction" class="nav-link">Introduction</a></li>
-				<li><a href="#boilerplate" class="nav-link">Boilerplate</a></li>
+				<li><a href="#boilerplate" class="nav-link">HTML Boilerplate</a></li>
 				<li><a href="#usage" class="nav-link">Usage</a></li>
+				<li><a href="#inputs" class="nav-link">Inputs</a></li>
+				<li><a href="#html_display" class="nav-link">HTML Display</a></li>
 			</ul>
 		</nav>
 	</aside>
@@ -80,10 +82,54 @@
 				<li>Non-JS Hamburger Menu.</li>
 			</ul>
 		</section>
+
+		<section id="inputs">
+			<h2>Inputs</h2>
+			<p>Toggle Switch. No JS, but requires some extra HTML fluff.</p>
+			<label class="wb wb-switch">
+				<span>Switch 1</span>
+				<input type="checkbox" /><span class="wb"></span>
+			</label>
+			<code>
+				&lt;label class="wb wb-switch"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Switch 1&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&lt;/label&gt;
+			</code>
+			<p>Custom style Radios and Checkboxes</p>
+			<label class="wb wb-check">
+				<span>Checkbox 1</span>
+				<input type="checkbox" /><span class="wb"></span>
+			</label>
+			<label class="wb wb-check">
+				<span>Checkbox 2</span>
+				<input type="checkbox" /><span class="wb"></span>
+			</label>
+			<label class="wb wb-radio">
+				<span>Radio 1</span>
+				<input type="radio" name="radio-group" /><span class="wb"></span>
+			</label>
+			<label class="wb wb-radio">
+				<span>Radio 2</span>
+				<input type="radio" name="radio-group" /><span class="wb"></span>
+			</label>
+			<code>
+
+			</code>
+		</section>
+
+		<section id="html_display">
+			<h2>HTML Formatter</h2>
+			<p>Convert raw HTML into something somewhat displayable for this page. Mind the whitespacing/tabbing.</p>
+			<textarea placeholder="Paste XML/HTML"></textarea>
+			<button type="submit">Submit</button>
+			<p>Result</p>
+			<code></code>
+		</section>
 		
 		<footer>
-			&copy; Copyright Input Eater Creations<br />
-			Webbits and this documentation covered by the MIT license.
+			<p>&copy; Copyright Input Eater Creations</p>
+			<p>Webbits and this documentation are covered by the MIT license.</p>
 		</footer>
 		
 	</main>

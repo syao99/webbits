@@ -1,0 +1,73 @@
+label.wb {
+	display: inline-block;
+	user-select: none;
+}
+
+label.wb > * {
+	vertical-align: middle;
+}
+
+label.wb::selection {
+	background: transparent;
+}
+
+.wb input {
+	display: none;
+}
+
+.wb-switch span.wb {
+	cursor: pointer;
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+	background-color: #ccc;
+	transition: .1s;
+	border-radius: 999px;
+}
+
+.wb-switch .wb:after {
+	display: inline-block;
+	content: "";
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	margin-top: 3px;
+	background-color: white;
+	transition: .1s;
+	border-radius: 100%;
+}
+
+.wb-switch input:checked + span.wb {
+	background-color: #333;
+}
+
+.wb-switch input:focus + span.wb {
+	box-shadow: 0 0 1px #333;
+}
+
+.wb-switch input:checked + span.wb:after {
+	transform: translateX(25px);
+}
+
+.wb-check, .wb-radio {
+	width: 20px;
+	height: 20px;
+}
+
+.wb-check .wb, .wb-radio .wb {
+	cursor: pointer;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	border: 3px solid #ccc;
+	box-sizing: border-box;
+}
+
+.wb-check input:checked + .wb, .wb-radio input:checked + .wb {
+	background: #333;
+}
+
+.wb-radio, .wb-radio .wb {
+	border-radius: 42069px;
+}
