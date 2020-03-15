@@ -75,10 +75,10 @@ label.wb::selection {
 }
 .wb.wb-nav label.wb {
 	cursor: pointer;
-	display: inline-block;
+	display: block;
 	background: var(--wb-color-lite);
-	min-width: 40px;
-	min-height: 40px;
+	width: 40px;
+	height: 40px;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -110,25 +110,35 @@ label.wb::selection {
 .wb.wb-nav input:checked ~ .wb-burger-icon:after {
 	transform: rotate(-90deg) translate(18px,0);
 }
-.wb.wb-nav ul {
+.wb.wb-nav section {
 	background: var(--wb-color-bg);
 	position: absolute;
 	margin-top: 15px;
 	display: none;
 	width: 100%;
 }
-.wb.wb-nav ul li a:hover {
+.wb.wb-nav section li a:hover {
 	background: var(--wb-color-lite);
 }
-.wb.wb-nav input:checked ~ ul {
+.wb.wb-nav input:checked ~ section {
 	display: block;
 }
 
-@media only screen and (max-width: var(--wb-small-width)) {
-	/*.wb.wb-nav .wb-burger-icon {
-		display: inline-block;
+@media only screen and (min-width: 600px) {
+	.wb.wb-nav.wb-responsive .wb-burger-icon {
+		display: none;
 	}
-	.wb.wb-nav ul {
+	.wb.wb-nav.wb-responsive section {
 		display: block;
-	}*/
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.wb.wb-nav.wb-responsive label.wb{
+		float: right;
+	}
+	.wb.wb-nav.wb-responsive section {
+		left: 0;
+	}
 }
