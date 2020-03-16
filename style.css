@@ -135,15 +135,6 @@ textarea {
 }
 
 @media only screen and (max-width: 600px) {
-	/*.icon {
-		display: block;
-	}
-	.menu-hide {
-		display: none !important;
-	}
-	#navbar:not(.menu-hide) {
-		
-	}*/
 	aside {
 		padding: 0;
 		width: 100%;
