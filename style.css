@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body, button {
+	font-family: 'Roboto', sans-serif;
+}
+button { cursor: pointer; }
 body {
 	background: #fff;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	max-width: 1200px;
 }
-
+.wb-modal:target ~ .wrap{
+	overflow: hidden;
+	max-height: 100vh;
+}
 h1,h2,h3,h4,h5,h6,p,code,pre,input,button,textarea,label {
 	margin: 0.75em 10px;
 }
@@ -28,6 +38,7 @@ aside, main {
 aside {
 	width: 29%;
 	min-width: 180px;
+	max-width: 350px;
 	display: inline-block;
 	vertical-align: top;
 	position: fixed;
@@ -134,11 +145,12 @@ textarea {
 	z-index: 10;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
 	aside {
 		padding: 0;
 		width: 100%;
 		top: 0;
+		max-width: 600px;
 	}
 	main {
 		width: 100%;

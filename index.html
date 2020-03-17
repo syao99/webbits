@@ -17,7 +17,17 @@
 	<title>Webbits Web Widgets</title>
 </head>
 <body>
-<aside>
+
+<div class="wb-modal" id="wb_modal">
+	<section class="wb-modal-content">
+		<a href="#modal" class="wb-closebtn"></a>
+		<p>High quality content here!</p>
+	</section>
+	<a class="wb-modal-overlay" href="#modal"></a>
+</div>
+
+<div class="wrap">
+	<aside>
 	<!--<svg class="icon" id="menu-icon" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2	s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2	S29.104,22,28,22z"/></svg>
 	<svg class="icon menu-hide" id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M4.34 2.93l12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34L4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>-->
 		<nav id="navbar" class="wb wb-nav wb-responsive">
@@ -30,6 +40,7 @@
 					<li><a href="#usage" class="nav-link">Usage</a></li>
 					<li><a href="#inputs" class="nav-link">Inputs</a></li>
 					<li><a href="#hamburger" class="nav-link">Hamburger Menu</a></li>
+					<li><a href="#modal" class="nav-link">Modal</a></li>
 					<li><a href="#html_display" class="nav-link">HTML Display</a></li>
 					<li><a href="#notes" class="nav-link">Notes</a></li>
 				</ul>
@@ -176,6 +187,21 @@
 			</code>
 		</section>
 
+		<section id="modal">
+			<h2>Modal</h2>
+			<p>Still no Javascript. Be sure to set the ID's properly, especially for the modal close action.</p>
+			<a href="#wb_modal"><button>Launch Modal</button></a>
+			<code>
+				&lt;div class="wb-modal" id="wb_modal"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;section class="wb-modal-content"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="wb-closebtn"&gt;&lt;/a&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;High quality content here!&lt;/p&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="wb-modal-overlay" href="#"&gt;&lt;/a&gt;<br />
+				&lt;/div&gt;
+			</code>
+		</section>
+
 		<section id="html_display">
 			<h2>HTML Formatter</h2>
 			<p>Convert raw HTML into something somewhat displayable. Mind the whitespacing/tabbing.</p>
@@ -201,7 +227,7 @@
 		</footer>
 		
 	</main>
-	
+</div>
 
 </body>
 </html>
