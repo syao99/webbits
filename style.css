@@ -114,10 +114,10 @@ form textarea {
 	height: 200px;
 }
 input, textarea, button {
-	border-radius: 4px;
+	/* border-radius: 4px; */
 	background: #fff;
 	border: 1px solid #999;
-	padding: 0.3em;
+	/* padding: 0.3em; */
 }
 #video {
 	width: 100%;

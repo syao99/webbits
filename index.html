@@ -31,7 +31,7 @@
 	<!--<svg class="icon" id="menu-icon" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2	s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2	S29.104,22,28,22z"/></svg>
 	<svg class="icon menu-hide" id="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M4.34 2.93l12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34L4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>-->
 		<nav id="navbar" class="wb wb-nav wb-responsive">
-			<label class="wb"><input type="checkbox" /><span class="wb-burger-icon"></span>
+			<label class="wb wb-burger"><input type="checkbox" class="wb-burger-icon" /><!-- <span class="wb-burger-icon"></span> -->
 			<section>
 				<h2>Contents</h2>
 				<ul>
@@ -104,50 +104,50 @@
 		<section id="inputs">
 			<h2>Inputs</h2>
 			<h3>Toggle Switch.</h3>
-			<p>No JS, but requires some extra HTML fluff.</p>
+			<p>No JS, and no longer requires extra HTML fluff.</p>
 			<label class="wb wb-switch">
-				<span>Switch 1</span>
-				<input type="checkbox" /><span class="wb"></span>
+				Switch 1
+				<input type="checkbox" />
 			</label>
 			<code>
 				&lt;label class="wb wb-switch"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Switch 1&lt;/span&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Switch 1<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
 				&lt;/label&gt;
 			</code>
 			<h3>Custom Radios and Checkboxes</h3>
 			<label class="wb wb-check">
-				<span>Checkbox 1</span>
-				<input type="checkbox" /><span class="wb"></span>
+				Checkbox 1
+				<input type="checkbox" />
 			</label>
 			<label class="wb wb-check">
-				<span>Checkbox 2</span>
-				<input type="checkbox" /><span class="wb"></span>
+				Checkbox 2
+				<input type="checkbox" />
 			</label>
 			<label class="wb wb-radio">
-				<span>Radio 1</span>
-				<input type="radio" name="radio-group" /><span class="wb"></span>
+				Radio 1
+				<input type="radio" name="radio-group" />
 			</label>
 			<label class="wb wb-radio">
-				<span>Radio 2</span>
-				<input type="radio" name="radio-group" /><span class="wb"></span>
+				Radio 2
+				<input type="radio" name="radio-group" />
 			</label>
 			<code>
 				&lt;label class="wb wb-check"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Checkbox 1&lt;/span&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Checkbox 1<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
 				&lt;/label&gt;<br />
 				&lt;label class="wb wb-check"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Checkbox 2&lt;/span&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Checkbox 2<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
 				&lt;/label&gt;<br />
 				&lt;label class="wb wb-radio"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Radio 1&lt;/span&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Radio 1<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;<br />
 				&lt;/label&gt;<br />
 				&lt;label class="wb wb-radio"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Radio 2&lt;/span&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;&lt;span class="wb"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;Radio 2<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="radio-group" /&gt;<br />
 				&lt;/label&gt;
 			</code>
 		</section>
@@ -156,9 +156,9 @@
 			<h2>Hamburger Menu</h2>
 			<p>Pure CSS.</p>
 			<nav class="wb wb-nav">
-				<label class="wb">
-					<input type="checkbox" />
-					<span class="wb-burger-icon"></span>
+				<label class="wb wb-burger">
+					<input type="checkbox" class="wb-burger-icon" />
+					<!-- <span class="wb-burger-icon"></span> -->
 					<section>
 						<h3>Navigation</h3>
 						<ul>
@@ -171,9 +171,8 @@
 			</nav>
 			<code>
 				&lt;nav class="wb wb-nav"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="wb"&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" /&gt;<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="wb-burger-icon"&gt;&lt;/span&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="wb wb-burger"&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" class="wb-burger-icon" /&gt;<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Navigation&lt;/h3&gt;<br />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
