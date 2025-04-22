@@ -43,6 +43,7 @@
 					<li><a href="#modal" class="nav-link">Modal</a></li>
 					<li><a href="#html_display" class="nav-link">HTML Display</a></li>
 					<li><a href="#notes" class="nav-link">Notes</a></li>
+					<li><a href="#partials" class="nav-link">HTML Partials</a></li>
 				</ul>
 				</label>
 			</section>
@@ -215,6 +216,14 @@
 		<section id="notes">
 			<h2>Notes</h2>
 			<p>This is still an early version. Possible future refactoring. Modification of CSS variables is recommended but unfortunately, media queries need to be manually modified. Not tested in a production site yet</p>
+		</section>
+		
+		<section id="partials">
+			<h2>HTML Partials</h2>
+			<p>page.js defines some helper functions for loading HTML partials on vanilla ES6, without templating, etc. Add page.js to your HTML head.</p>
+			<code>&lt;script type="text/javascript" src="page.js"&gt;&lt;/script&gt;</code>
+			<p>To use, add this where you want the partial inserted:</p>
+			<code>&lt;script&gt;page.insertPartial('/path/to/partial.html', document.currentScript);&lt;/script&gt;</code>
 		</section>
 		
 		<footer>
